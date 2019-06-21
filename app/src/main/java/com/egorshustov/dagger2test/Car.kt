@@ -1,17 +1,19 @@
 package com.egorshustov.dagger2test
 
 import android.util.Log
+import com.egorshustov.dagger2test.MainActivity.Companion.TAG
 import javax.inject.Inject
 
 data class Car @Inject constructor(
-    val engine: Engine,
-    val wheels: Wheels
+    val wheels: Wheels,
+    val engine: Engine
 ) {
     fun drive() {
-        Log.d(TAG, "driving...")
+        Log.d(TAG, "Car: drive()")
     }
 
-    companion object {
-        const val TAG = "Car"
+    @Inject
+    fun enableRemote(remote: Remote) {
+        remote.setListener(this)
     }
 }

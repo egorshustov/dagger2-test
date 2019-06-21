@@ -17,4 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         car.drive()
     }
+
+    companion object {
+        const val TAG = "TAG"
+    }
 }
