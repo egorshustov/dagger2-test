@@ -1,5 +1,8 @@
-package com.egorshustov.dagger2test
+package com.egorshustov.dagger2test.dagger
 
+import com.egorshustov.dagger2test.car.Rims
+import com.egorshustov.dagger2test.car.Tires
+import com.egorshustov.dagger2test.car.Wheels
 import dagger.Module
 import dagger.Provides
 

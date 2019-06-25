@@ -1,5 +1,7 @@
-package com.egorshustov.dagger2test
+package com.egorshustov.dagger2test.dagger
 
+import com.egorshustov.dagger2test.MainActivity
+import com.egorshustov.dagger2test.car.Car
 import dagger.Component
 
 /** Creates and stores our objects (by creating Directed Acyclic Graph),
@@ -10,7 +12,7 @@ import dagger.Component
  * Dagger will implement this interface at compile time and creates
  * all the necessary code at the compile time (this is called an annotation processing).
  */
-@Component(modules = [WheelsModule::class])
+@Component(modules = [WheelsModule::class, DieselEngineModule::class])
 interface CarComponent {
     fun getCar(): Car
 

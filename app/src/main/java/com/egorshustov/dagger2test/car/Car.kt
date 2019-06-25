@@ -1,4 +1,4 @@
-package com.egorshustov.dagger2test
+package com.egorshustov.dagger2test.car
 
 import android.util.Log
 import com.egorshustov.dagger2test.MainActivity.Companion.TAG
@@ -9,6 +9,7 @@ data class Car @Inject constructor(
     val engine: Engine
 ) {
     fun drive() {
+        engine.start()
         Log.d(TAG, "Car: drive()")
     }
 
