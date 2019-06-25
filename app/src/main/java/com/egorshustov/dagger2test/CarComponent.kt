@@ -10,7 +10,7 @@ import dagger.Component
  * Dagger will implement this interface at compile time and creates
  * all the necessary code at the compile time (this is called an annotation processing).
  */
-@Component
+@Component(modules = [WheelsModule::class])
 interface CarComponent {
     fun getCar(): Car
 
