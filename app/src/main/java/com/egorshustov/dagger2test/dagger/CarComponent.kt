@@ -5,6 +5,7 @@ import com.egorshustov.dagger2test.car.Car
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
+import javax.inject.Singleton
 
 /** Creates and stores our objects (by creating Directed Acyclic Graph),
  * and then provides them to us. Also It can be called as "The Injector".
@@ -14,6 +15,7 @@ import javax.inject.Named
  * Dagger will implement this interface at compile time and creates
  * all the necessary code at the compile time (this is called an annotation processing).
  */
+@Singleton
 @Component(modules = [WheelsModule::class, PetrolEngineModule::class])
 interface CarComponent {
     fun getCar(): Car

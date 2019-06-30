@@ -5,6 +5,7 @@ import com.egorshustov.dagger2test.car.Tires
 import com.egorshustov.dagger2test.car.Wheels
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class WheelsModule {
@@ -13,6 +14,7 @@ class WheelsModule {
         return Rims()
     }
 
+    @Singleton
     @Provides
     fun provideTires(): Tires {
         val tires = Tires()
