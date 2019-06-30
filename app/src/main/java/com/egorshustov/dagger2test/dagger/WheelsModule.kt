@@ -14,7 +14,7 @@ class WheelsModule {
         return Rims()
     }
 
-    @Singleton
+    @PerActivity
     @Provides
     fun provideTires(): Tires {
         val tires = Tires()
